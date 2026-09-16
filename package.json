@@ -1,0 +1,13 @@
+{
+  "name": "bean-sounds",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && . .venv/bin/activate && python -m uvicorn main:app --host 0.0.0.0 --port 8000\" \"cd frontend && npm run dev -- --hostname 0.0.0.0 --port 3001\"",
+    "backend": "cd backend && . .venv/bin/activate && python -m uvicorn main:app --host 0.0.0.0 --port 8000",
+    "frontend": "cd frontend && npm run dev -- --hostname 0.0.0.0 --port 3001",
+    "setup": "cd backend && python3.12 -m venv .venv && . .venv/bin/activate && python -m pip install -r requirements.txt && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}
