@@ -1,0 +1,7 @@
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+audio_storage
+bean_sounds.db
+.env
